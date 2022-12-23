@@ -1,0 +1,76 @@
+:root {
+    --light-background: #ffffff;
+    --light-button-background: #f9f9f9;
+    --light-a: #393acb;
+    --light-a-hover: #747bff;
+    --light-color: #213547;
+
+    --dark-background: #242424;
+    --dark-button-background: #1a1a1a;
+    --dark-button-border-hover: #646cff;
+    --dark-a: #646cff;
+    --dark-a-hover: #535bf2;
+    --dark-color: rgba(255, 255, 255, 0.87);
+
+    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 2vmax;
+
+    /*noinspection CssUnknownProperty*/
+    color-scheme: light dark;
+
+    color: var(--dark-color);
+    background-color: var(--dark-background);
+}
+
+body {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+p, h2 {
+    margin: 0;
+    text-align: center;
+}
+
+a {
+    color: var(--dark-a);
+    text-decoration: inherit;
+}
+
+a:hover {
+    color: var(--dark-a-hover);
+}
+
+button {
+    border-radius: 20px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    background-color: var(--dark-button-background);
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+
+button:hover {
+    border-color: var(--dark-button-border-hover);
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        color: var(--light-color);
+        background-color: var(--light-background);
+    }
+
+    a {
+        color: var(--light-a);
+    }
+
+    a:hover {
+        color: var(--light-a-hover);
+    }
+
+    button {
+        background-color: var(--light-button-background);
+    }
+}
